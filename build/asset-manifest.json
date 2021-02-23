@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fb666694.chunk.css",
+    "main.js": "/static/js/main.b06ffe94.chunk.js",
+    "main.js.map": "/static/js/main.b06ffe94.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f693082c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f693082c.js.map",
+    "static/js/2.903d92dd.chunk.js": "/static/js/2.903d92dd.chunk.js",
+    "static/js/2.903d92dd.chunk.js.map": "/static/js/2.903d92dd.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.018f83a8c27ff748dd2d3e2e72e57f6d.js": "/precache-manifest.018f83a8c27ff748dd2d3e2e72e57f6d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fb666694.chunk.css.map": "/static/css/main.fb666694.chunk.css.map",
+    "static/js/2.903d92dd.chunk.js.LICENSE.txt": "/static/js/2.903d92dd.chunk.js.LICENSE.txt",
+    "static/js/main.b06ffe94.chunk.js.LICENSE.txt": "/static/js/main.b06ffe94.chunk.js.LICENSE.txt",
+    "static/media/il_mheg_underwater.png": "/static/media/il_mheg_underwater.af8bc34b.png",
+    "static/media/paper-kit.scss?v=1.2.0": "/static/media/nucleo-icons.f32ed5ad.eot",
+    "static/media/titania.png": "/static/media/titania.b05be08e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f693082c.js",
+    "static/js/2.903d92dd.chunk.js",
+    "static/css/main.fb666694.chunk.css",
+    "static/js/main.b06ffe94.chunk.js"
+  ]
+}
