@@ -1,10 +1,16 @@
 .index{
     // header
+    div.page-header{
+        div.content-center{
+            margin-top: 0;
+        }
+    }
+
     div.title-brand{
         max-width: 930px;
         h1{
             font-size: 3.6em;
-            margin: 30px 0 0;
+            // margin: 30px 0 0;
             background: unset;
             -webkit-text-fill-color: #fff;
             font-weight: 300;
