@@ -70,7 +70,7 @@ function IndexNavbar() {
             title="homepage"
             tag={Link}
           >
-            Bunch of Knobs
+            Eternium
           </NavbarBrand>
           <button
             className="navbar-toggler"
