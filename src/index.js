@@ -31,6 +31,8 @@ import Rules from "views/Rules.js"
 import RegisterPage from "views/examples/RegisterPage.js";
 // others
 
+// serviceWorker.register();
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

@@ -81,7 +81,7 @@ function IndexNavbar() {
               setBodyClick(true);
             }}
           >
-            <span className="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon nc-icon nc-bullet-list-67" />
           </button>
           <UncontrolledCollapse navbar toggler="#navbarNavDropdown">
             <Nav className="ml-auto mt-2 mt-lg-0" navbar >
