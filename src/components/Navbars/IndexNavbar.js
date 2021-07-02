@@ -1,29 +1,27 @@
 import React from "react";
-
-import classnames from "classnames";
 import { Link } from "react-router-dom";
-
+// nodejs library that concatenates strings
+import classnames from "classnames";
 
 // reactstrap components
 import {
-  UncontrolledCollapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
+  Collapse,
   NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
-  Container
+  Container,
 } from "reactstrap";
-
-// core components
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [bodyClick, setBodyClick] = React.useState(false);
+  const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+
+  const toggleNavbarCollapse = () => {
+    setNavbarCollapse(!navbarCollapse);
+    document.documentElement.classList.toggle("nav-open");
+  };
 
   React.useEffect(() => {
     const updateNavbarColor = () => {
@@ -46,46 +44,42 @@ function IndexNavbar() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
   });
-
   return (
-    <>
-      {bodyClick ? (
-        <div
-          id="bodyClick"
-          onClick={() => {
-            document.documentElement.classList.toggle("nav-open");
-            setBodyClick(false);
-          }}
-        />
-      ) : null}
-      <Navbar       
-        className={classnames("fixed-top", navbarColor)}
-        color-on-scroll="300"
-        expand="lg"
-      >
-        <Container>
-        <NavbarBrand
+    <Navbar
+      className={classnames("fixed-top", navbarColor)}
+      color-on-scroll="300"
+      expand="lg"
+    >
+      <Container>
+        <div className="navbar-translate">
+          <NavbarBrand
             data-placement="bottom"
             to="/index"
-            title="homepage"
+            target="_blank"
+            title="Coded by Creative Tim"
             tag={Link}
           >
             Eternium
           </NavbarBrand>
           <button
-            className="navbar-toggler"
-            id="navbarNavDropdown"
-            type="button"
-            onClick={() => {
-              document.documentElement.classList.toggle("nav-open");
-              setBodyClick(true);
-            }}
+            aria-expanded={navbarCollapse}
+            className={classnames("navbar-toggler navbar-toggler", {
+              toggled: navbarCollapse,
+            })}
+            onClick={toggleNavbarCollapse}
           >
-            <span className="navbar-toggler-icon nc-icon nc-bullet-list-67" />
+            <span className="navbar-toggler-bar bar1" />
+            <span className="navbar-toggler-bar bar2" />
+            <span className="navbar-toggler-bar bar3" />
           </button>
-          <UncontrolledCollapse navbar toggler="#navbarNavDropdown">
-            <Nav className="ml-auto mt-2 mt-lg-0" navbar >
-              <NavItem >
+        </div>
+        <Collapse
+          className="justify-content-end"
+          navbar
+          isOpen={navbarCollapse}
+        >
+          <Nav navbar>
+          <NavItem >
                 <NavLink to="/rules" tag={Link}>
                   Rules 
                 </NavLink>
@@ -132,12 +126,11 @@ function IndexNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown> */}
-            </Nav>
-          </UncontrolledCollapse>
-        </Container>
-      </Navbar>
-    </>
+          </Nav>
+        </Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default IndexNavbar
+export default IndexNavbar;
